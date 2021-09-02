@@ -33,6 +33,12 @@
     }
   }
 
+  &-active {
+    @at-root &-title {
+      color: red;
+    }
+  }
+
   &-icon {
     border: 2px solid var(--primary-color);
     border-radius: 14px;
@@ -46,8 +52,8 @@
   &-title {
     color: var(--primary-color);
     font-size: 18px;
-    font-weight: 600;
-    letter-spacing: .025em;
+    font-weight: 800;
+    letter-spacing: .01em;
     vertical-align: middle;
   }
 
@@ -63,9 +69,9 @@
     width: 32px;
 
     &-count {
-      //background: blue;
-      font-size: 13px;
       display: block;
+      font-size: 13px;
+      font-weight: 600;
       left: 8px;
       position: absolute;
       right: 0;

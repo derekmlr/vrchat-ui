@@ -16,13 +16,13 @@ export default function LeftPanelMenuItem({ name, newCount, isActive, setActive 
         href='#'
         onClick={handleClick}>
       { /* Since icon graphics need more work, they're skipped in this. */ }
-      <span class='LeftPanelMenuItem-icon LeftPanelMenuItem-icon'></span>
-      <span class='LeftPanelMenuItem-title'>{formattedName}</span>
+      <span className='LeftPanelMenuItem-icon LeftPanelMenuItem-icon'></span>
+      <span className='LeftPanelMenuItem-title'>{formattedName}</span>
       { newCount > 0 ? (
         <span
-            class='LeftPanelMenuItem-new'
+            className='LeftPanelMenuItem-new'
             style={{ backgroundImage: `url(${LeftPanelMenuItemNewBg})` }}>
-          <span class='LeftPanelMenuItem-new-count'>
+          <span className='LeftPanelMenuItem-new-count'>
             {newCount > 9 ? '9+' : newCount }
           </span>
         </span>

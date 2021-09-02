@@ -1,9 +1,9 @@
-import logo from './logo.svg';
+import React from 'react';
 
 import FriendsPanel from './components/FriendsPanel';
+import LeftPanel from './components/LeftPanel';
 
 import './App.scss';
-import LeftPanel from './components/LeftPanel';
 
 function App() {
   return (

@@ -23,7 +23,7 @@ const friends = [
 
 // Add quick 'maybe' unique IDs.
 friends.forEach((friend) => {
-  friend.id = new Date().getTime();
+  friend.id = Math.ceil(new Date().getTime() / Math.random());
   if (friend.in_world) friend.in_world.id = new Date().getTime();
   return friend;
 });

@@ -4,7 +4,7 @@ import LeftPanelMenuItem from './LeftPanelMenuItem';
 import './LeftPanel.scss';
 
 export default function LeftPanel() {
-  const [ activeMenuItem, setActiveMenuItem ] = useState('');
+  const [ activeMenuItem, setActiveMenuItem ] = useState('welcome');
   const [ messagesCount, setMessagesCount ] = useState(0);
 
   useEffect(() => {
@@ -22,11 +22,12 @@ export default function LeftPanel() {
             <span className='indicator indicator-online'>Online</span>
             kayzewolf
           </strong>
-          <a href='/settings'>Log out</a>
+          <a className='LeftPanel-user-action' href='/settings'>Log out</a>
         </span>
       </div>
 
       <nav className='LeftPanel-menu'>
+        { /* The isActive and setActive could probably be handled better. */ }
         <LeftPanelMenuItem
             name='welcome'
             isActive={activeMenuItem === 'welcome'}
