@@ -1,0 +1,20 @@
+.LeftPanel {
+  border-right: 1px solid var(--base-level2-color);
+  padding-top: 64px;
+  width: 264px;
+
+  &-user {
+    background: var(--base-level2-color);
+    display: flex;
+    margin: 0 0 24px;
+    padding: 16px 24px;
+
+    &-icon {
+      background: rgba(black, 0.2);
+      border-radius: 8px;
+      display: block;
+      height: 48px;
+      width: 64px;
+    }
+  }
+}

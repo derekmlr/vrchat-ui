@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# VRChat.com UI Proposal
+
+Just a React built prototype based on a design mock.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

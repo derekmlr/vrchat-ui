@@ -1,0 +1,76 @@
+.LeftPanelMenuItem {
+  --menu-item-height: calc(50px - 2px);
+  --menu-item-transition: all linear .1s;;
+
+  background: var(--menu-color-base);
+  border: 2px solid var(--menu-color-border);
+  border-radius: 0 10px 0 10px;
+  display: block;
+  height: var(--menu-item-height);
+  margin: 0 24px 10px;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: var(--menu-item-transition);
+
+  &:before {
+    background: var(--menu-color-border);
+    content: '';
+    display: inline-block;
+    height: 100%;
+    transition: var(--menu-item-transition);
+    vertical-align: middle;
+    width: 16px;
+  }
+
+  &:hover,
+  &-active {
+    background: var(--menu-color-active-base);
+    border-color: var(--primary-color);
+
+    @at-root &:before {
+      background: var(--primary-color);
+    }
+  }
+
+  &-icon {
+    border: 2px solid var(--primary-color);
+    border-radius: 14px;
+    display: inline-block;
+    height: 24px;
+    margin: 0 16px 0 12px;
+    vertical-align: middle;
+    width: 24px;
+  }
+
+  &-title {
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: .025em;
+    vertical-align: middle;
+  }
+
+  &-new {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: var(--menu-color-new-text);
+    display: block;
+    height: 32px;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    width: 32px;
+
+    &-count {
+      //background: blue;
+      font-size: 13px;
+      display: block;
+      left: 8px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 2px;
+    }
+  }
+}
