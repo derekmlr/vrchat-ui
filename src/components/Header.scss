@@ -1,0 +1,21 @@
+.Header {
+  align-items: center;
+  display: flex;
+  height: var(--header-height);
+  left: 0;
+  padding: 0 24px;
+  position: absolute;
+  right: var(--leftPanel-width);
+  top: 0;
+
+  &-logo {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: var(--leftPanel-width);
+
+    &-img {
+      width: 80px;
+    }
+  }
+}

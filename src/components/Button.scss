@@ -1,0 +1,46 @@
+.Button {
+  background: var(--secondary-color);
+  border-radius: 18px;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: -.01em;
+  line-height: 36px;
+  padding: 0 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .1s linear;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &-lg {
+    border-radius: 25px;
+    font-size: 15px;
+    line-height: 50px;
+  }
+
+  &-sm {
+    border-radius: 14px;
+    font-size: 12px;
+    line-height: 28px;
+  }
+
+  &-fill {
+    width: 100%;
+  }
+
+  &-primary {
+    background: var(--button-primary-bg);
+    color: var(--button-primary-text);
+  }
+
+  &-icon {
+    font-size: 18px;
+    margin-right: 6px;
+    margin-top: -3px;
+    vertical-align: middle;
+  }
+}

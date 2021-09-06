@@ -1,0 +1,38 @@
+.SocialPanel {
+  background: var(--base-level1-color);
+  display: flex;
+  flex-direction: column;
+  width: var(--socialPanel-width);
+
+  &-header {
+    align-items: center;
+    background: var(--base-level2-color);
+    color: #fff;
+    display: flex;
+    height: var(--header-height);
+    justify-content: space-between;
+    padding: 0 24px;
+
+    &-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0;
+      text-transform: capitalize;
+    }
+
+    &-actions {
+      margin-left: auto;
+    }
+  }
+
+  &-scroller {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding-left: 24px;
+    height: 0;
+  }
+
+  @media screen and (max-width: 1440px) {
+    width: 360px;
+  }
+}

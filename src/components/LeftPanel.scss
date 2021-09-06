@@ -1,7 +1,9 @@
 .LeftPanel {
   border-right: 1px solid var(--base-level2-color);
-  padding-top: 64px;
-  width: 264px;
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--header-height);
+  width: var(--leftPanel-width);
 
   &-user {
     background: var(--base-level2-color);
@@ -11,7 +13,9 @@
     padding: 16px 24px;
 
     &-icon {
-      background: rgba(black, 0.25);
+      background-color: rgba(black, 0.25);
+      background-repeat: no-repeat;
+      background-size: cover;
       border-radius: 8px;
       display: block;
       height: 48px;
@@ -40,5 +44,15 @@
         text-decoration: underline;
       }
     }
+  }
+
+  &-menu {
+    flex: 1;
+  }
+
+  &-bottomActions {
+    flex-shrink: 1;
+    justify-self: end;
+    padding: 0 24px 24px;
   }
 }

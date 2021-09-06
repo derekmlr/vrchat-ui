@@ -1,0 +1,56 @@
+.ListItem {
+  border-bottom: 1px solid var(--base-level2-color);
+  display: flex;
+  flex-wrap: nowrap;
+  min-height: 72px;
+  padding: 16px 0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &-image {
+    background-color: rgba(black, 0.25);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-color: var(--primary-color);
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 2px;
+    margin-right: 12px;
+    height: 72px;
+    width: 96px;
+  }
+
+  &-info {
+    flex: 1;
+    font-size: 14px;
+    max-width: 280px;
+    margin-right: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &-status {
+      vertical-align: middle;
+    }
+
+    &-title,
+    &-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &-title {
+      color: var(--primary-color);
+      display: inline;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
+      vertical-align: middle;
+    }
+
+    &-text {
+      margin: 3px 0;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+:root {
+  --base-color: #0B1313;
+  --base-level1-color: #0F2424;
+  --base-level2-color: #233A3A;
+  --base-level3-color: #386161;
+  --primary-color: #6CE3F3;
+  --secondary-color: #549292;
+  --text-color: #fff;
+  --text-alt-color: rgba(255, 255, 255, 0.5);
+  --text-subheader-color: #549292;
+
+  --button-primary-bg: var(--primary-color);
+  --button-primary-text: var(--base-color);
+
+  --menu-color-base: #1D3030;
+  --menu-color-border: #386161;
+  --menu-color-active-base: #3E7979;
+  --menu-color-new-text: #fff;
+
+  --header-height: 64px;
+  --leftPanel-width: 250px;
+  --socialPanel-width: 480px;
+  --socialPanel-width-min: 360px;
+}
+
+body {
+  background: var(--base-color);
+  color: var(--text-color);
+  font-family: 'Source Sans Pro', arial, sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -5,6 +5,8 @@ import LeftPanelMenuItemNewBg from '../assets/LeftPanelMenuItem-newBg.svg';
 
 export default function LeftPanelMenuItem({ name, newCount, isActive, setActive }) {
   let formattedName = name.charAt(0).toUpperCase() + name.slice(1);
+  let classes = 'LeftPanelMenuItem';
+  if (isActive === name) classes += ' LeftPanelMenuItem-active';
 
   const handleClick = () => {
     setActive(name);
@@ -12,7 +14,7 @@ export default function LeftPanelMenuItem({ name, newCount, isActive, setActive 
 
   return (
     <a
-        className={`LeftPanelMenuItem ${isActive ? 'LeftPanelMenuItem-active' : ''}`}
+        className={classes}
         href='#'
         onClick={handleClick}>
       { /* Since icon graphics need more work, they're skipped in this. */ }

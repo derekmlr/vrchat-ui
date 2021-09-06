@@ -1,0 +1,40 @@
+.SearchBar {
+  display: flex;
+  padding: 0 24px;
+
+  &-input,
+  &-submit {
+    background: rgba(#fff, .1);
+    border: none;
+    color: var(--text-color);
+    line-height: 40px;
+    order: 2;
+    outline: none;
+    padding: 0;
+    transition: all .1s ease-in-out;
+  }
+
+  &-input {
+    border-radius: 0 22px 22px 0;
+    width: 320px;
+
+    &::placeholder {
+      color: var(--text-alt-color);
+    }
+
+    &:focus,
+    &:focus + button {
+      background: rgba(#fff, .2);
+    }
+
+    &:focus {
+      width: 480px;
+    }
+  }
+
+  &-submit {
+    border-radius: 22px 0 0 22px;
+    order: 1;
+    padding: 0 16px;
+  }
+}
