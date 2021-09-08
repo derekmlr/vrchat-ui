@@ -18,7 +18,7 @@ export default function LeftPanelMenuItem({ name, newCount, isActive, setActive 
         href='#'
         onClick={handleClick}>
       { /* Since icon graphics need more work, they're skipped in this. */ }
-      <span className='LeftPanelMenuItem-icon LeftPanelMenuItem-icon'></span>
+      <span className='LeftPanelMenuItem-icon'></span>
       <span className='LeftPanelMenuItem-title'>{formattedName}</span>
       { newCount > 0 ? (
         <span

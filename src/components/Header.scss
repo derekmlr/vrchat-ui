@@ -3,19 +3,59 @@
   display: flex;
   height: var(--header-height);
   left: 0;
-  padding: 0 24px;
+  padding: 0;
   position: absolute;
   right: var(--leftPanel-width);
   top: 0;
 
-  &-logo {
+  &-left {
     align-items: center;
     display: flex;
     height: 100%;
+    line-height: 0;
     width: var(--leftPanel-width);
+  }
+
+  &-logo {
+    $logoParent: &;
+    display: inline-flex;
+    line-height: 0;
+    padding: 0 24px;
+
+    &:hover {
+      & #{$logoParent}-img {
+        animation-name: headerLogoWobble;
+        animation-timing-function: ease;
+        transform: scale(1.1);
+      }
+    }
 
     &-img {
+      animation-duration: 1s;
+      transform-origin: bottom;
+      transition: transform .1s ease-in-out;
       width: 80px;
     }
+  }
+}
+
+@keyframes headerLogoWobble {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  20% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  40% {
+    transform: scale(1.1) rotate(-5deg);
+  }
+  60% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  80% {
+    transform: scale(1.1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1.1);
   }
 }

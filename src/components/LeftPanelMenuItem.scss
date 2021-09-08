@@ -1,14 +1,17 @@
 .LeftPanelMenuItem {
   --menu-item-height: calc(50px - 2px);
-  --menu-item-transition: all linear .1s;;
+  --menu-item-transition: all linear .15s;
+  $root: &;
 
+  align-items: center;
   background: var(--menu-color-base);
   border: 2px solid var(--menu-color-border);
   border-radius: 0 10px 0 10px;
-  display: block;
+  display: flex;
   height: var(--menu-item-height);
   margin: 0 24px 10px;
   overflow: hidden;
+  padding-left: 16px;
   position: relative;
   text-decoration: none;
   transition: var(--menu-item-transition);
@@ -16,11 +19,13 @@
   &:before {
     background: var(--menu-color-border);
     content: '';
-    display: inline-block;
     height: 100%;
+    left: 0;
+    position: absolute;
     transition: var(--menu-item-transition);
     vertical-align: middle;
     width: 16px;
+    z-index: 0;
   }
 
   &:hover,
@@ -28,14 +33,17 @@
     background: var(--menu-color-active-base);
     border-color: var(--primary-color);
 
-    @at-root &:before {
+    &:before {
       background: var(--primary-color);
+      width: 68px;
     }
-  }
 
-  &-active {
-    @at-root &-title {
-      color: red;
+    & #{$root}-title {
+      margin-left: 8px;
+    }
+
+    & #{$root}-icon {
+      border-color: var(--menu-color-active-base);
     }
   }
 
@@ -45,8 +53,9 @@
     display: inline-block;
     height: 24px;
     margin: 0 16px 0 12px;
-    vertical-align: middle;
+    position: relative;
     width: 24px;
+    z-index: 1;
   }
 
   &-title {
@@ -54,7 +63,7 @@
     font-size: 18px;
     font-weight: 800;
     letter-spacing: .01em;
-    vertical-align: middle;
+    transition: margin .1s ease-in-out;
   }
 
   &-new {
